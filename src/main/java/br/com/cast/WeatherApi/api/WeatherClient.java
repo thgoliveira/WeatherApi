@@ -18,8 +18,8 @@ public class WeatherClient {
 	}
 
 	public WeatherDto getPrevisoes(String cidade) {
-		WeatherDto weatherDto = this.client.getForObject(URL_BUSCA_PREVISOES, WeatherDto.class, cidade, APPID);
-		return weatherDto;
+		WeatherDto wResultDto = this.client.getForObject(URL_BUSCA_PREVISOES, WeatherDto.class, cidade, APPID);
+		return wResultDto;
 	}
 	
 

@@ -2,13 +2,14 @@ package br.com.cast.WeatherApi.dto;
 
 public class WeatherWindDto {
 
-	private Long speed;
+	private String speed;
+	
 
-	public Long getSpeed() {
+	public String getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(Long speed) {
+	public void setSpeed(String speed) {
 		this.speed = speed;
 	}
 

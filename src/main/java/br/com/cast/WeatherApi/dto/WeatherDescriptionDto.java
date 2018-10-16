@@ -1,8 +1,13 @@
 package br.com.cast.WeatherApi.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class WeatherDescriptionDto {
 	
+	@JsonProperty("main")
 	private String main;
+	
+	@JsonProperty("icon")
 	private String icon;
 
 	public String getMain() {

@@ -1,35 +1,52 @@
-package br.com.cast.WeatherApi.dto;
+package br.com.cast.WeatherApi.modelo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Date;
 
-public class WeatherResultDto {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "clima")
+public class WeatherResult {
+
+	@Id
+	@SequenceGenerator(sequenceName = "clima_id_seq", name = "gerador_clima_seq", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gerador_clima_seq")
+	private Integer id;
 	
-	@JsonProperty("cidade")
+	@Column(name = "cidade")
 	private String cidade;
 	
-	@JsonProperty("temp_min")
+	@Column(name = "tempmin")
 	private String tempMin;
 	
-	@JsonProperty("temp_max")
+	@Column(name = "tempmax")
 	private String tempMax;
-	
-	@JsonProperty("pressure")
+
+	@Column(name = "pressure")
 	private String pressure;
-	
-	@JsonProperty("humidity")
+
+	@Column(name = "humidity")
 	private String humidity;
-	
-	@JsonProperty("main")
+
+	@Column(name = "main")
 	private String main;
-	
-	@JsonProperty("icon")
+
+	@Column(name = "icon")
 	private String icon;
 	
-	@JsonProperty("speed")
+	@Column(name = "speed")
 	private String speed;
-	
-	@JsonProperty("dt_txt")
-	private String dataTxt;
+
+	@Column(name = "data")
+	private Date data;
+
+	/*--------Getters and Setters------------*/
 
 	public String getCidade() {
 		return cidade;
@@ -95,15 +112,21 @@ public class WeatherResultDto {
 		this.speed = speed;
 	}
 
-	public String getDataTxt() {
-		return dataTxt;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setDataTxt(String dataTxt) {
-		this.dataTxt = dataTxt;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
 
 	
 

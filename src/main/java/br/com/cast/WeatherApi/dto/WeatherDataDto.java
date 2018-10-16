@@ -5,9 +5,14 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WeatherDataDto {
-
+	
+	@JsonProperty("main")
 	private WeatherMainDto main;
+	
+	@JsonProperty("weather")
 	private List<WeatherDescriptionDto> weather;
+	
+	@JsonProperty("wind")
 	private WeatherWindDto wind;
 
 	@JsonProperty("dt_txt")
@@ -44,5 +49,9 @@ public class WeatherDataDto {
 	public void setData(String data) {
 		this.data = data;
 	}
+	
+	
+
+
 
 }

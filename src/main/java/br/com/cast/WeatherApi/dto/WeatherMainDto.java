@@ -1,41 +1,50 @@
 package br.com.cast.WeatherApi.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class WeatherMainDto {
 
-	private Long temp_min;
-	private Long temp_max;
-	private Long pressure;
-	private Long humidity;
+	@JsonProperty("temp_min")
+	private String tempMin;
 
-	public Long getTemp_min() {
-		return temp_min;
+	@JsonProperty("temp_max")
+	private String tempMax;
+
+	@JsonProperty("pressure")
+	private String pressure;
+
+	@JsonProperty("humidity")
+	private String humidity;
+
+	public String getTempMin() {
+		return tempMin;
 	}
 
-	public void setTemp_min(Long temp_min) {
-		this.temp_min = temp_min;
+	public void setTempMin(String tempMin) {
+		this.tempMin = tempMin;
 	}
 
-	public Long getTemp_max() {
-		return temp_max;
+	public String getTempMax() {
+		return tempMax;
 	}
 
-	public void setTemp_max(Long temp_max) {
-		this.temp_max = temp_max;
+	public void setTempMax(String tempMax) {
+		this.tempMax = tempMax;
 	}
 
-	public Long getPressure() {
+	public String getPressure() {
 		return pressure;
 	}
 
-	public void setPressure(Long pressure) {
+	public void setPressure(String pressure) {
 		this.pressure = pressure;
 	}
 
-	public Long getHumidity() {
+	public String getHumidity() {
 		return humidity;
 	}
 
-	public void setHumidity(Long humidity) {
+	public void setHumidity(String humidity) {
 		this.humidity = humidity;
 	}
 
