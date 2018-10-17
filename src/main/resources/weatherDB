@@ -1,0 +1,14 @@
+create table clima
+(
+   id serial not null,
+   cidade varchar(50) not null,
+   tempmin  varchar(50) not null,
+   tempmax  varchar(50) not null,
+   pressure  varchar(50) not null,
+   humidity  varchar(50) not null,
+   main  varchar(50) not null,
+   icon  varchar(50) not null,
+   speed  varchar(50) not null,
+   data date not null,
+   constraint pk_clima primary key (id)
+)
