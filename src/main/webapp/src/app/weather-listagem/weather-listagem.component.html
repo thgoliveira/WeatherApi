@@ -1,0 +1,38 @@
+<fieldset>
+  <legend>Previsões</legend>
+  
+  <div>
+    <input type="text"  placeholder="Informe a cidade" />
+    <input type="submit" value="GO" />
+  </div>
+
+  <ul  *ngFor="let clima of climas">
+    <li>
+      {{ clima.icon }}
+    </li>
+    <li>
+      {{ clima.cidade }}
+    </li>
+    <li>
+      {{ clima.temp_min }}
+    </li>
+    <li>
+      {{ clima.temp_max }}
+    </li>
+    <li>
+      {{ clima.pressure }}
+    </li>
+    <li>
+      {{ clima.humidity }}
+    </li>
+    <li>
+      {{ clima.main }}
+    </li>
+    <li>
+      {{ clima.speed }}
+    </li>
+    <li>
+      {{ clima.dt_txt }}
+    </li>
+  </ul>
+</fieldset>
